@@ -1,12 +1,11 @@
-const animatedText = document.querySelector(".animated-text");
+/* DOMAIN REGISTRAR
+domain.com
+namecheap.com
+godaddy.com
+cloudflase.com
+squarespace.com
+hostinger.com
+gandi.com
+porkbun.com
+*/
 
-/* let index = 0;
-
-function changeText() {
-  animatedText.textContent = domains[index];
-  index = (index + 1) % domains.length;
-}
-
-changeText();
-
-setInterval(changeText, 3000); */

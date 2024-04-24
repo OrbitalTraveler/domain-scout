@@ -24,6 +24,7 @@ body {
   justify-content: center;
   height: 100vh;
   padding-bottom: 5rem;
+  z-index: 2;
 }
 
 .container.left {
@@ -84,11 +85,14 @@ form {
 
 .container.right {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 40%;
 }
 
 .url {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #fff;
   padding: 1rem;
@@ -99,6 +103,7 @@ form {
   overflow: hidden;
   font-size: 1.5rem;
   max-width: 400px;
+  width: 100%;
   gap: 5px;
 }
 
@@ -141,6 +146,7 @@ form {
 }
 
 .card-provider {
+  margin-top: 0.5rem;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -155,11 +161,27 @@ form {
   border: 1px solid black;
 }
 
+.card img {
+  width: 32px;
+}
+
 .card:nth-child(1) {
   background-color: #85e0a3;
   top: 50px;
   left: 0;
   rotate: 10deg;
+  animation: card1 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes card1 {
+  from {
+    top: -50px;
+    left: -100px;
+  }
+  to {
+    top: 50px;
+    left: 0;
+  }
 }
 
 .card:nth-child(2) {
@@ -167,20 +189,25 @@ form {
   bottom: 50px;
   right: 15px;
   rotate: -10deg;
+  animation: card2 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.card img {
-  width: 32px;
+@keyframes card2 {
+  from {
+    bottom: -50px;
+    right: -100px;
+  }
+  to {
+    bottom: 50px;
+    right: 15px;
+  }
 }
 
 .support {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 2rem;
-  position: fixed;
-  left: 4rem;
-  bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .support i {
